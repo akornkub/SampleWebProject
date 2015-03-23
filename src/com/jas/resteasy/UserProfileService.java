@@ -42,4 +42,6 @@ public class UserProfileService {
 		
 		return Response.status(200).entity(userProfile).build();
 	}
+	
+	
 }
