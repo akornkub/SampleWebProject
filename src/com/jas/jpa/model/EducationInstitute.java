@@ -12,20 +12,20 @@ public class EducationInstitute implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
-	private String institutename;
+	private String instituteName;
 
 	public EducationInstitute() {
 	}
 
-	public EducationInstitute(int id, String institutename) {
+	public EducationInstitute(int id, String instituteName) {
 		this.id = id;
-		this.institutename = institutename;
+		this.instituteName = instituteName;
 	}
 
-	public EducationInstitute(int id, String institutename,
+	public EducationInstitute(int id, String instituteName,
 			Set<Education> educations) {
 		this.id = id;
-		this.institutename = institutename;
+		this.instituteName = instituteName;
 	}
 
 	@Id
@@ -39,11 +39,11 @@ public class EducationInstitute implements java.io.Serializable {
 	}
 
 	@Column(name = "institutename", nullable = false)
-	public String getInstitutename() {
-		return this.institutename;
+	public String getInstituteName() {
+		return this.instituteName;
 	}
 
-	public void setInstitutename(String institutename) {
-		this.institutename = institutename;
+	public void setInstituteName(String instituteName) {
+		this.instituteName = instituteName;
 	}
 }

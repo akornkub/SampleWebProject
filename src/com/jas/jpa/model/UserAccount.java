@@ -11,15 +11,15 @@ public class UserAccount implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
-	private String username;
+	private String userName;
 	private String password;
 
 	public UserAccount() {
 	}
 
-	public UserAccount(int id, String username, String password) {
+	public UserAccount(int id, String userName, String password) {
 		this.id = id;
-		this.username = username;
+		this.userName = userName;
 		this.password = password;
 	}
 
@@ -34,12 +34,12 @@ public class UserAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "username", nullable = false, length = 10)
-	public String getUsername() {
-		return this.username;
+	public String getUserName() {
+		return this.userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	@Column(name = "password", nullable = false)

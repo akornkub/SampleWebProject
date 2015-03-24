@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.Map, com.jas.myweb.domain.*" %>
+    pageEncoding="UTF-8" import="java.util.Map, com.jas.myweb.domain.UserProfile" %>
     
 <%
 	String userName = null;

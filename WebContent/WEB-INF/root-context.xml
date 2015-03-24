@@ -11,10 +11,13 @@
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd"
        xmlns:mvc="http://www.springframework.org/schema/mvc">
 
-    <context:component-scan base-package="com.jas.spring.iocdi.web"/>
+    <context:component-scan base-package="com.jas"/>
     
     <bean id="messageService" class="com.jas.spring.iocdi.web.HelloMessageServiceImpl" />
     
+    <bean id="provinceService" class="com.jas.jpa.business.ProvinceServiceImpl" />
+    <bean id="educationInstituteService" class="com.jas.jpa.business.EducationInstituteServiceImpl" />
+        
 	<context:annotation-config/>
     <mvc:annotation-driven />
 

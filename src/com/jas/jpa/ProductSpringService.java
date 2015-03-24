@@ -1,6 +1,7 @@
 package com.jas.jpa;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ public class ProductSpringService {
 	@RequestMapping(value="{productId}", method=RequestMethod.GET)
 	@ResponseBody
 	public Product getProduct(@PathVariable("productId") int productId) {
+		 DaoUtil.setEntityManagerFactory(Persistence.createEntityManagerFactory("UserProfilePersistenceUnit"));
 		EntityManager em = DaoUtil.createEntityManager();
 		
 		Product product = null;

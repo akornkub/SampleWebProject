@@ -15,10 +15,10 @@ public class HomeAddress implements java.io.Serializable {
 
 	private int id;
 	private Province province;
-	private UserProfile userprofile;
+	private UserProfile userProfile;
 	private String street1;
 	private String street2;
-	private Integer zipcode;
+	private Integer zipCode;
 
 	public HomeAddress() {
 	}
@@ -27,14 +27,14 @@ public class HomeAddress implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public HomeAddress(int id, Province province, UserProfile userprofile,
-			String street1, String street2, Integer zipcode) {
+	public HomeAddress(int id, Province province, UserProfile userProfile,
+			String street1, String street2, Integer zipCode) {
 		this.id = id;
 		this.province = province;
-		this.userprofile = userprofile;
+		this.userProfile = userProfile;
 		this.street1 = street1;
 		this.street2 = street2;
-		this.zipcode = zipcode;
+		this.zipCode = zipCode;
 	}
 
 	@Id
@@ -59,12 +59,12 @@ public class HomeAddress implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "userprofileid")
-	public UserProfile getUserprofile() {
-		return this.userprofile;
+	public UserProfile getUserProfile() {
+		return this.userProfile;
 	}
 
-	public void setUserprofile(UserProfile userprofile) {
-		this.userprofile = userprofile;
+	public void setUserProfile(UserProfile userProfile) {
+		this.userProfile = userProfile;
 	}
 
 	@Column(name = "street1")
@@ -86,12 +86,12 @@ public class HomeAddress implements java.io.Serializable {
 	}
 
 	@Column(name = "zipcode")
-	public Integer getZipcode() {
-		return this.zipcode;
+	public Integer getZipCode() {
+		return this.zipCode;
 	}
 
-	public void setZipcode(Integer zipcode) {
-		this.zipcode = zipcode;
+	public void setZipCode(Integer zipCode) {
+		this.zipCode = zipCode;
 	}
 
 }

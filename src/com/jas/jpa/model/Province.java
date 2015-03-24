@@ -11,14 +11,14 @@ public class Province implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
-	private String provincename;
+	private String provinceName;
 
 	public Province() {
 	}
 
-	public Province(int id, String provincename) {
+	public Province(int id, String provinceName) {
 		this.id = id;
-		this.provincename = provincename;
+		this.provinceName = provinceName;
 	}
 
 	@Id
@@ -32,12 +32,12 @@ public class Province implements java.io.Serializable {
 	}
 
 	@Column(name = "provincename", nullable = false)
-	public String getProvincename() {
-		return this.provincename;
+	public String getProvinceName() {
+		return this.provinceName;
 	}
 
-	public void setProvincename(String provincename) {
-		this.provincename = provincename;
+	public void setProvinceName(String provinceName) {
+		this.provinceName = provinceName;
 	}
 
 }

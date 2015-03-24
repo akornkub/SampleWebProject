@@ -15,10 +15,10 @@ public class Education implements java.io.Serializable {
 
 	private int id;
 	private EducationInstitute educationInstitute;
-	private UserProfile userprofile;
+	private UserProfile userProfile;
 	private String qualification;
-	private Integer fromyear;
-	private Integer toyear;
+	private Integer fromYear;
+	private Integer toYear;
 
 	public Education() {
 	}
@@ -29,14 +29,14 @@ public class Education implements java.io.Serializable {
 	}
 
 	public Education(int id, EducationInstitute educationInstitute,
-			UserProfile userprofile, String qualification, Integer fromyear,
-			Integer toyear) {
+			UserProfile userProfile, String qualification, Integer fromYear,
+			Integer toYear) {
 		this.id = id;
 		this.educationInstitute = educationInstitute;
-		this.userprofile = userprofile;
+		this.userProfile = userProfile;
 		this.qualification = qualification;
-		this.fromyear = fromyear;
-		this.toyear = toyear;
+		this.fromYear = fromYear;
+		this.toYear = toYear;
 	}
 
 	@Id
@@ -61,12 +61,12 @@ public class Education implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "userprofileid")
-	public UserProfile getUserprofile() {
-		return this.userprofile;
+	public UserProfile getUserProfile() {
+		return this.userProfile;
 	}
 
-	public void setUserprofile(UserProfile userprofile) {
-		this.userprofile = userprofile;
+	public void setUserProfile(UserProfile userProfile) {
+		this.userProfile = userProfile;
 	}
 
 	@Column(name = "qualification", nullable = false)
@@ -78,22 +78,22 @@ public class Education implements java.io.Serializable {
 		this.qualification = qualification;
 	}
 
-	@Column(name = "fromyear")
-	public Integer getFromyear() {
-		return this.fromyear;
+	@Column(name = "fromYear")
+	public Integer getFromYear() {
+		return this.fromYear;
 	}
 
-	public void setFromyear(Integer fromyear) {
-		this.fromyear = fromyear;
+	public void setFromYear(Integer fromYear) {
+		this.fromYear = fromYear;
 	}
 
-	@Column(name = "toyear")
-	public Integer getToyear() {
-		return this.toyear;
+	@Column(name = "toYear")
+	public Integer getToYear() {
+		return this.toYear;
 	}
 
-	public void setToyear(Integer toyear) {
-		this.toyear = toyear;
+	public void setToYear(Integer toYear) {
+		this.toYear = toYear;
 	}
 
 }

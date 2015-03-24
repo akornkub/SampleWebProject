@@ -14,10 +14,10 @@ public class Job implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
-	private UserProfile userprofile;
+	private UserProfile userProfile;
 	private String position;
-	private Integer fromyear;
-	private Integer toyear;
+	private Integer fromYear;
+	private Integer toYear;
 
 	public Job() {
 	}
@@ -27,13 +27,13 @@ public class Job implements java.io.Serializable {
 		this.position = position;
 	}
 
-	public Job(int id, UserProfile userprofile, String position,
-			Integer fromyear, Integer toyear) {
+	public Job(int id, UserProfile userProfile, String position,
+			Integer fromYear, Integer toYear) {
 		this.id = id;
-		this.userprofile = userprofile;
+		this.userProfile = userProfile;
 		this.position = position;
-		this.fromyear = fromyear;
-		this.toyear = toyear;
+		this.fromYear = fromYear;
+		this.toYear = toYear;
 	}
 
 	@Id
@@ -48,12 +48,12 @@ public class Job implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "userprofileid")
-	public UserProfile getUserprofile() {
-		return this.userprofile;
+	public UserProfile getUserProfile() {
+		return this.userProfile;
 	}
 
-	public void setUserprofile(UserProfile userprofile) {
-		this.userprofile = userprofile;
+	public void setUserProfile(UserProfile userProfile) {
+		this.userProfile = userProfile;
 	}
 
 	@Column(name = "position", nullable = false)
@@ -66,20 +66,20 @@ public class Job implements java.io.Serializable {
 	}
 
 	@Column(name = "fromyear")
-	public Integer getFromyear() {
-		return this.fromyear;
+	public Integer getFromYear() {
+		return this.fromYear;
 	}
 
-	public void setFromyear(Integer fromyear) {
-		this.fromyear = fromyear;
+	public void setFromYear(Integer fromYear) {
+		this.fromYear = fromYear;
 	}
 
 	@Column(name = "toyear")
-	public Integer getToyear() {
-		return this.toyear;
+	public Integer getToYear() {
+		return this.toYear;
 	}
 
-	public void setToyear(Integer toyear) {
-		this.toyear = toyear;
+	public void setToYear(Integer toYear) {
+		this.toYear = toYear;
 	}
 }

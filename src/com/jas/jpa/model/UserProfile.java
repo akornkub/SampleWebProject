@@ -13,17 +13,17 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "userprofile", schema = "public")
+@Table(name = "userProfile", schema = "public")
 public class UserProfile implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
 	private UserAccount userAccount;
-	private HomeAddress homeaddress;
+	private HomeAddress homeAddress;
 	private List<Education> educations = new ArrayList<Education>(0);
 	private List<Job> jobs = new ArrayList<Job>(0);
-	private String firstname;
-	private String lastname;
+	private String firstName;
+	private String lastName;
 	private String email;
 
 	public UserProfile() {
@@ -33,14 +33,14 @@ public class UserProfile implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public UserProfile(int id, HomeAddress homeaddress, List<Education> educations,
+	public UserProfile(int id, HomeAddress homeAddress, List<Education> educations,
 			List<Job> jobs, String firstname, String lastname, String email) {
 		this.id = id;
-		this.homeaddress = homeaddress;
+		this.homeAddress = homeAddress;
 		this.educations = educations;
 		this.jobs = jobs;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
 	}
 
@@ -66,12 +66,12 @@ public class UserProfile implements java.io.Serializable {
 	
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "homeaddressid")
-	public HomeAddress getHomeaddress() {
-		return this.homeaddress;
+	public HomeAddress getHomeAddress() {
+		return this.homeAddress;
 	}
 
-	public void setHomeaddress(HomeAddress homeaddress) {
-		this.homeaddress = homeaddress;
+	public void setHomeAddress(HomeAddress homeAddress) {
+		this.homeAddress = homeAddress;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "userProfile")
@@ -93,21 +93,21 @@ public class UserProfile implements java.io.Serializable {
 	}
 
 	@Column(name = "firstname")
-	public String getFirstname() {
-		return this.firstname;
+	public String getFirstName() {
+		return this.firstName;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	@Column(name = "lastname")
-	public String getLastname() {
-		return this.lastname;
+	public String getLastName() {
+		return this.lastName;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	@Column(name = "email")
